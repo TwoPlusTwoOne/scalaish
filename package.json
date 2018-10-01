@@ -1,20 +1,40 @@
 {
-  "name": "scalaish",
-  "version": "1.0.0",
-  "description": "A library that tries to implement some scala-like tools",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "scala",
-    "option",
-    "either",
-    "stringbuilder",
-    "string-builder",
-    "\"string",
-    "builder\""
-  ],
-  "author": "Francisco Di Giandomenico",
-  "license": "ISC"
+	"name": "scalaish",
+	"version": "1.0.0",
+	"description": "A library that tries to implement some scala-like tools",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"test": "jest --config jestconfig.json",
+		"format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+		"lint": "tslint -p tsconfig.json",
+		"prepare" : "npm run build",
+		"prepublishOnly" : "npm test && npm run lint",
+		"preversion" : "npm run lint",
+		"version" : "npm run format && git add -A src",
+		"postversion" : "git push && git push --tags"
+	},
+	"keywords": [
+		"scala",
+		"option",
+		"either",
+		"stringbuilder",
+		"string-builder"
+	],
+	"author": "Francisco Di Giandomenico",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/jest": "^23.3.2",
+		"@types/pluralize": "0.0.29",
+		"jest": "^23.6.0",
+		"prettier": "^1.14.3",
+		"ts-jest": "^23.10.3",
+		"tslint": "^5.11.0",
+		"tslint-config-prettier": "^1.15.0",
+		"typescript": "^3.1.1"
+	},
+	"dependencies": {
+		"pluralize": "^7.0.0"
+	}
 }
