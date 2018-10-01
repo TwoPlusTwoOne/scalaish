@@ -1,0 +1,20 @@
+{
+  "name": "scalaish",
+  "version": "1.0.0",
+  "description": "A library that tries to implement some scala-like tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scala",
+    "option",
+    "either",
+    "stringbuilder",
+    "string-builder",
+    "\"string",
+    "builder\""
+  ],
+  "author": "Francisco Di Giandomenico",
+  "license": "ISC"
+}
