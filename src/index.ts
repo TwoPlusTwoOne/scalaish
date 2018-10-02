@@ -1,9 +1,6 @@
-export { default as StringBuilder } from './stringBuilder/stringBuilder';
-export { Nothing, Something, Optional } from './optional/optional';
+import * as optional from './optional/optional';
+const { None, Some, Optional } = optional;
 
-declare global {
-  enum OptionalType {
-    Some,
-    None,
-  }
-}
+
+export { default as StringBuilder } from './stringBuilder/stringBuilder';
+export { None, Some, Optional };
