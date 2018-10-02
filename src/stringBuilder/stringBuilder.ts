@@ -1,5 +1,4 @@
 class StringBuilder {
-
   private str: string[] = [];
 
   constructor(init?: string | string[]) {
@@ -17,12 +16,11 @@ class StringBuilder {
   public append = (value: string): StringBuilder => {
     this.str.push(value);
     return this;
-  }
+  };
 
   public build = (separator?: string): string => {
     return this.str.join(separator || '');
-  }
-
+  };
 }
 
 export default StringBuilder;

@@ -1,9 +1,7 @@
 import { Some, None } from '../index';
 
 describe('Optional types', () => {
-
   describe('Some', () => {
-
     it('should create a Some object', () => {
       const option = Some('Hello world');
 
@@ -33,11 +31,9 @@ describe('Optional types', () => {
       expect(fn1).toHaveBeenCalled();
       expect(fn2).not.toHaveBeenCalled();
     });
-
   });
 
   describe('None', () => {
-
     it('should create a None object', () => {
       const option = None;
 
@@ -67,7 +63,5 @@ describe('Optional types', () => {
       expect(fn1).not.toHaveBeenCalled();
       expect(fn2).toHaveBeenCalled();
     });
-
   });
-
 });

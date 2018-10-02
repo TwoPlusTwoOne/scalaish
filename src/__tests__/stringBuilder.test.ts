@@ -1,9 +1,9 @@
 import { StringBuilder } from '../index';
 describe('String builder', () => {
-
   it('should build basic string', () => {
     const builder = new StringBuilder();
-    builder.append('Hello')
+    builder
+      .append('Hello')
       .append(' ')
       .append('world')
       .append('!');
@@ -41,5 +41,4 @@ describe('String builder', () => {
     const finalString = builder.build();
     expect(finalString).toEqual('Hello world!');
   });
-
 });
